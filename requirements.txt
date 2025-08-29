@@ -1,0 +1,41 @@
+# Core FastAPI and server
+fastapi
+uvicorn
+
+# Quantum computing libraries
+qiskit
+qiskit-aer
+qutip
+
+# Scientific computing
+numpy
+scipy
+
+# Visualization and plotting
+plotly
+dash
+dash-bootstrap-components
+
+# Data processing
+pandas
+
+# API and validation
+pydantic
+python-multipart
+
+# File handling and templating
+aiofiles
+jinja2
+
+# Report generation and image processing
+reportlab
+pillow
+
+# Graph and data analysis
+networkx
+matplotlib
+seaborn
+
+# Additional utilities
+python-dotenv
+httpx

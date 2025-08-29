@@ -1,0 +1,23 @@
+# Minimal requirements for basic functionality
+fastapi
+uvicorn[standard]
+qiskit
+qiskit-aer
+qutip
+numpy
+scipy
+plotly
+dash
+dash-bootstrap-components
+pandas
+pydantic
+python-multipart
+aiofiles
+jinja2
+reportlab
+pillow
+networkx
+matplotlib
+seaborn
+python-dotenv
+httpx

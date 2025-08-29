@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Computing Web App Documentation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Documentation</h2>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#quantum-basics">Quantum Basics</a></li>
+                <li><a href="#algorithms">Quantum Algorithms</a></li>
+                <li><a href="#architecture">System Architecture</a></li>
+                <li><a href="#api">API Overview</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#visualizations">Visualizations</a></li>
+                <li><a href="#technical-specs">Technical Specifications</a></li>
+                <li><a href="#interactive">Interactive Concepts</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search documentation...">
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>Quantum Computing Web Application Documentation</h1>
+            <p>Comprehensive guide to understand the concepts, architecture, and implementation</p>
+        </header>
+
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Welcome to the Quantum Computing Web Application. This application provides a comprehensive platform for exploring quantum computing concepts, simulating quantum circuits, and visualizing quantum states.</p>
+        </section>
+        
+        <section id="quantum-basics">
+            <h2>Quantum Basics</h2>
+            <p>Quantum computing is a type of computing that uses quantum-mechanical phenomena, such as superposition and entanglement, to perform operations on data. It has the potential to solve certain problems much faster than classical computers.</p>
+            
+            <h3>Superposition</h3>
+            <p>Superposition is the ability of a quantum system to be in multiple states at the same time. In a classical bit, a bit can be either 0 or 1. In a quantum bit (qubit), it can be in a state of 0, 1, or any quantum superposition of these states.</p>
+            
+            <h3>Entanglement</h3>
+            <p>Entanglement is a quantum phenomenon where two or more qubits become linked in such a way that the state of one qubit cannot be described independently of the state of the other(s), even when the qubits are separated by large distances.</p>
+            
+            <h3>Quantum Gates</h3>
+            <p>Quantum gates are the building blocks of quantum circuits. They perform operations on qubits, changing their states according to the rules of quantum mechanics.</p>
+        </section>
+        
+        <section id="algorithms">
+            <h2>Quantum Algorithms</h2>
+            <p>Quantum algorithms are designed to run on quantum computers and can solve specific problems more efficiently than classical algorithms. Some notable quantum algorithms include:</p>
+            <ul>
+                <li>Shor's Algorithm for factoring large numbers</li>
+                <li>Grover's Algorithm for searching unsorted databases</li>
+                <li>Quantum Fourier Transform for solving periodic problems</li>
+            </ul>
+        </section>
+        
+        <section id="architecture">
+            <h2>System Architecture</h2>
+            <p>The web application follows a modern architecture that separates concerns and allows for scalability and maintainability.</p>
+            
+            <h3>Architecture Diagram</h3>
+            <div class="diagram-container">
+                <div class="mermaid">
+                    graph TD
+                        A[User Interface] --> B[React Frontend]
+                        B --> C[Quantum Circuit Visualization]
+                        B --> D[Interactive Controls]
+                        B --> E[State Management]
+                        A --> F[API Layer]
+                        F --> G[RESTful API Endpoints]
+                        F --> H[WebSocket Communication]
+                        A --> I[Quantum Processing]
+                        I --> J[Qiskit Simulation]
+                        I --> K[QuTiP Analysis]
+                        I --> L[Noise Modeling]
+                        I --> M[Quantum Algorithm Execution]
+                        A --> N[Data Visualization]
+                        N --> O[Plotly.js Visualizations]
+                        N --> P[D3.js Custom Visualizations]
+                        N --> Q[3D Quantum Visualizations]
+                        A --> R[Data Storage]
+                        R --> S[In-Memory State]
+                        R --> T[Local Storage]
+                        R --> U[Exported Files]
+                </div>
+            </div>
+            
+            <h3>Detailed Architecture Description</h3>
+            <p>The architecture is designed with separation of concerns in mind, following modern web development patterns:</p>
+            
+            <h4>1. User Interface Layer</h4>
+            <p>The React-based frontend provides an interactive and responsive user interface. It handles user interactions, visualization of quantum circuits, and communication with the backend services.</p>
+            
+            <h4>2. API Layer</h4>
+            <p>The API layer serves as the communication bridge between frontend and backend. It provides RESTful endpoints and WebSocket communication for real-time updates.</p>
+            
+            <h4>3. Quantum Processing Layer</h4>
+            <p>This layer handles all quantum computing operations, including circuit execution, algorithm implementation, and quantum state analysis using Qiskit and QuTiP.</p>
+            
+            <h4>4. Data Visualization Layer</h4>
+            <p>Responsible for rendering quantum circuits, Bloch spheres, and other quantum visualizations using libraries like Plotly.js and D3.js.</p>
+            
+            <h4>5. Data Storage Layer</h4>
+            <p>Manages temporary state storage, local storage for user preferences, and file exports for circuits and results.</p>
+        </section>
+        
+        <section id="api">
+            <h2>API Overview</h2>
+            <p>The API provides endpoints for interacting with the quantum computing backend. It supports both RESTful operations and WebSocket communication for real-time updates.</p>
+            
+            <h3>RESTful Endpoints</h3>
+            <p>The RESTful API provides endpoints for:</p>
+            <ul>
+                <li>Creating and managing quantum circuits</li>
+                <li>Executing quantum algorithms</li>
+                <li>Retrieving simulation results</li>
+                <li>Exporting circuits and results</li>
+            </ul>
+            
+            <h3>WebSocket Communication</h3>
+            <p>WebSocket communication is used for real-time updates, such as:</p>
+            <ul>
+                <li>Live simulation results</li>
+                <li>Interactive controls</li>
+                <li>State updates</li>
+            </ul>
+        </section>
+        
+        <section id="use-cases">
+            <h2>Use Cases</h2>
+            <p>The Quantum Computing Web Application can be used for a variety of purposes, including:</p>
+            <ul>
+                <li>Education and learning about quantum computing concepts</li>
+                <li>Research and development of quantum algorithms</li>
+                <li>Simulation of quantum circuits for practical applications</li>
+                <li>Exploration of quantum phenomena and their implications</li>
+            </ul>
+        </section>
+        
+        <section id="visualizations">
+            <h2>Visualizations</h2>
+            <p>The application provides various visualizations to help understand quantum concepts:</p>
+            <ul>
+                <li>Quantum circuit diagrams</li>
+                <li>Bloch spheres for qubit states</li>
+                <li>Entanglement visualizations</li>
+                <li>Quantum state probability distributions</li>
+            </ul>
+        </section>
+        
+        <section id="technical-specs">
+            <h2>Technical Specifications</h2>
+            
+            <h3>Frontend Technology Stack</h3>
+            <p>The frontend is built using modern web technologies:</p>
+            <ul>
+                <li>React with TypeScript for component-based architecture</li>
+                <li>TailwindCSS for utility-first styling</li>
+                <li>Framer Motion for animations and transitions</li>
+                <li>Plotly.js for advanced visualizations</li>
+                <li>Recharts and D3.js for custom quantum visualizations</li>
+            </ul>
+            
+            <h3>Backend Technology Stack</h3>
+            <p>The backend provides quantum computing capabilities through:</p>
+            <ul>
+                <li>FastAPI (Python) for asynchronous operations</li>
+                <li>Qiskit for quantum simulation and circuit execution</li>
+                <li>QuTiP for advanced quantum operations and state analysis</li>
+                <li>NumPy and SciPy for numerical computations</li>
+                <li>Plotly Dash for embedded analytics dashboards</li>
+            </ul>
+            
+            <h3>Quantum Simulation Engine</h3>
+            <p>The simulation engine leverages:</p>
+            <ul>
+                <li>Qiskit Aer for high-performance quantum simulation (supports CPU/GPU)</li>
+                <li>QuTiP for density matrix calculations and entanglement analysis</li>
+                <li>OpenQASM support for circuit definition and execution</li>
+                <li>Noise modeling capabilities for realistic quantum simulations</li>
+            </ul>
+            
+            <h3>Development Requirements</h3>
+            <ul>
+                <li>Python 3.9+ for backend services</li>
+                <li>Node.js 18+ for frontend development</li>
+                <li>Docker for containerized deployment</li>
+                <li>npm for frontend package management</li>
+                <li>pip for Python package management</li>
+            </ul>
+            
+            <h3>Performance Characteristics</h3>
+            <ul>
+                <li>Real-time simulation and visualization of quantum states</li>
+                <li>Efficient handling of multi-qubit systems (scalability up to ~20 qubits)</li>
+                <li>Interactive visualizations with <100ms response times</li>
+                <li>Dynamic parameter updates with instant visualization refresh</li>
+            </ul>
+        </section>
+        
+        <section id="interactive">
+            <h2>Interactive Quantum Concepts</h2>
+            
+            <h3>Quantum State Visualization</h3>
+            <div class="interactive-demo">
+                <div class="qubit-state">
+                    <div class="state-representation">
+                        <div class="state-line">
+                            <span class="state-label">|0⟩</span>
+                            <div class="state-bar" style="height: 40px;"></div>
+                        </div>
+                        <div class="state-line">
+                            <span class="state-label">|1⟩</span>
+                            <div class="state-bar" style="height: 60px;"></div>
+                        </div>
+                    </div>
+                    <div class="state-equation">
+                        |ψ⟩ = 0.707|0⟩ + 0.707|1⟩
+                    </div>
+                </div>
+                <div class="controls">
+                    <label>Superposition Control</label>
+                    <input type="range" min="0" max="1" step="0.01" value="0.5" onchange="updateQuantumState(this.value)">
+                </div>
+            </div>
+            
+            <h3>Quantum Circuit Diagram</h3>
+            <div class="circuit-diagram">
+                <div class="qubit-wire">
+                    <span class="qubit-label">Q0</span>
+                    <div class="gate hgate">H</div>
+                    <div class="gate xgate">X</div>
+                    <div class="gate measure">M</div>
+                </div>
+                <div class="qubit-wire">
+                    <span class="qubit-label">Q1</span>
+                    <div class="gate hgate">H</div>
+                    <div class="gate cnot-control">•</div>
+                    <div class="gate measure">M</div>
+                </div>
+                <div class="circuit-connections">
+                    <div class="connection vertical" style="top: 45px; left: 115px;"></div>
+                </div>
+            </div>
+            
+            <h3>Quantum Entanglement Visualization</h3>
+            <div class="entanglement-demo">
+                <div class="qubit-pair">
+                    <div class="qubit-spin" id="qubitA"></div>
+                    <div class="qubit-spin" id="qubitB"></div>
+                </div>
+                <div class="controls">
+                    <button onclick="entangleQubits()">Entangle Qubits</button>
+                    <button onclick="measureQubit()">Measure Qubit</button>
+                </div>
+            </div>
+            
+            <h3>Quantum Algorithm Flow</h3>
+            <div class="mermaid">
+                graph TD
+                    A[Initialize Qubits] --> B[Apply Hadamard Gates]
+                    B --> C[Create Entanglement]
+                    C --> D[Apply Quantum Oracle]
+                    D --> E[Measure Qubits]
+                    E --> F[Classical Post-Processing]
+                    F --> G[Output Result]
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 Quantum Computing Web Application. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
