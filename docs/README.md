@@ -196,3 +196,4 @@ CORS_ORIGINS=http://localhost:3000
 - [Qiskit Documentation](https://qiskit.org/documentation/)
 - [QuTiP Documentation](https://qutip.org/docs/latest/)
 - [Python 3.13 Features](https://docs.python.org/3.13/whatsnew/3.13.html)
+  --if u like work contact eepicsamurai@gmail.com 
